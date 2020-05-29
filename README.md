@@ -1,2 +1,2 @@
 # curse_sap_cp
-curse online
+curse online Week 1
