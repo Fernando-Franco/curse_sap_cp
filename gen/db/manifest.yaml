@@ -1,0 +1,9 @@
+---
+applications:
+- name: incidents_p005676-db
+  path: .
+  no-route: true
+  health-check-type: process
+  memory: 128M
+  services:
+  - incidents_p005676-db-hdi-container

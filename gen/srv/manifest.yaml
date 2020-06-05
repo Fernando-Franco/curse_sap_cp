@@ -1,0 +1,7 @@
+---
+applications:
+- name: incidents_p005676-srv
+  path: .
+  memory: 128M
+  services:
+  - incidents_p005676-db-hdi-container
