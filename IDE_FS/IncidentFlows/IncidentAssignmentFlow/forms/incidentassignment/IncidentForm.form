@@ -1,0 +1,89 @@
+{
+    "id": "incidentform",
+    "schemaVersion": "1.0.0",
+    "name": "IncidentForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "basic_info",
+            "type": "section",
+            "title": "Basic Info",
+            "content": [
+                {
+                    "id": "title",
+                    "type": "string",
+                    "label": "Title",
+                    "readOnly": true,
+                    "value": "${context.incident.title}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "description",
+                    "type": "string",
+                    "label": "Description",
+                    "readOnly": true,
+                    "value": "${context.incident.description}",
+                    "control": {
+                        "type": "TextArea",
+                        "properties": {
+                            "height": "small"
+                        }
+                    },
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "category",
+                    "type": "string",
+                    "label": "Category",
+                    "readOnly": true,
+                    "value": "${context.incident.category_code}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "notes",
+            "type": "section",
+            "title": "Notes",
+            "content": [
+                {
+                    "id": "comment",
+                    "type": "string",
+                    "label": "Comment",
+                    "placeholder": "Please enter your comments here",
+                    "readOnly": false,
+                    "value": "${context.comment}",
+                    "control": {
+                        "type": "TextArea",
+                        "properties": {
+                            "height": "small"
+                        }
+                    },
+                    "constraints": {
+                        "required": true
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "Confirm",
+            "text": "confirm",
+            "decisionType": "positive"
+        },
+        {
+            "id": "Reject",
+            "text": "reject",
+            "decisionType": ""
+        }
+    ]
+}

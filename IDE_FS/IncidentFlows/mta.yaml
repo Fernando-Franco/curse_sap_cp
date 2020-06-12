@@ -1,0 +1,17 @@
+ID: P005676IncidentFlows
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: IncidentAssignmentFlow
+    type: com.sap.application.content
+    path: IncidentAssignmentFlow
+    requires:
+      - name: wf-service
+        parameters:
+          content-target: true
+resources:
+  - name: wf-service
+    parameters:
+      service-plan: standard
+      service: workflow
+    type: org.cloudfoundry.existing-service
